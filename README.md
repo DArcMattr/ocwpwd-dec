@@ -1,4 +1,4 @@
-# Orange County WordPress Web Designers December Presentation
+# Orange County WordPress Web Designers December '13 Presentation
 
 Quick notes for my presentation at the December meetup for OCWPWD.
 
