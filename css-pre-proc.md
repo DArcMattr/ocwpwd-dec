@@ -1,41 +1,51 @@
 # Intro to CSS Preprocessors
 
+XXX Public URL goes here XXX
 
+* * *
 
 ## Who I am
 
-Developer, more of an artisan than designer
+More developer than designer; artisan, not artist;
+
+I carry this perspective into my web work
+
+* * *
 
 ## What's a preprocessor?
 
-A program that
+A program that takes a more compact CSS-like file, and turns it into
+full-fledged CSS
+
+* * *
 
 ## Why use a preprocessor?
 
 DRY - Don't Repeat Yourself
 
-Reusability
+Reusability - all preprocessors have ways to tie up common CSS operations into
+smaller pieces
+
+* * *
 
 ## What preprocessors are out there?
 
-LESS <http://lesscss.org>
+### LESS <http://lesscss.org>
 
 * Famous for being the engine behind Bootstrap <http://getbootstrap.com/>
 
-SASS <http://sass-lang.com>
+### SASS <http://sass-lang.com>
 
 * Engine behind Zurb Foundation <http://foundation.zurb.com/>
 
 * 2 variants, counting SCSS, which is more CSS-like; will use SASS/SCSS
   interchangeably, but SASS is easier to pronounce
 
-Stylus <http://learnboost.github.io/stylus/>
+### Stylus <http://learnboost.github.io/stylus/>
 
 * Engine behind Roots <http://roots.cx/>
 
-## Installation
-
-* If you're on a Mac, there's
+* * *
 
 ## What a preprocessor gives you
 
@@ -43,6 +53,7 @@ Examples are in SASS, because that's what I know best
 
 ### More compact expression through nesting
 
+```CSS
 a {
   ...
 }
@@ -69,9 +80,13 @@ a:active {
 a img {
   ...
 }
+```
+
+* * *
 
 Equivalent to:
 
+```SCSS
 a {
   ...
   &:link {
@@ -93,6 +108,9 @@ a {
     ...
   }
 }
+```
+
+* * *
 
 ### Variables
 
@@ -119,6 +137,26 @@ a {
 
 ### Mixins
 
+* * *
+
+## That's fine, I guess, but how do you use it?
+
+These utilities were born in the command-line, coder-driven world, but there are
+ways to use these without having to venture to the command line.
+
+* CodeKit, for Mac <http://incident57.com/codekit/>
+
+* Prepros, for Mac & Windows <http://alphapixels.com/prepros/>
+
+* * *
+
+These packages streamline front-end development work, however I do not use them.
+I can only pass on what their selling points are:
+
+* Automagic processing &amp; browser refreshing For javascript & CSS work
+
+* Also "uglifies" stylesheets & javascripts for you
+
 ## More reading
 
 ### <http://colorschemedesigner.com/> done in SASS
@@ -126,3 +164,4 @@ a {
 * Color Schemer library for SASS: <https://github.com/Team-Sass/color-schemer>
 
 ### Bootstrap Without all the Debt <https://coderwall.com/p/wixovg>
+* * *
