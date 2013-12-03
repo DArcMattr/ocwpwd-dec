@@ -1,0 +1,24 @@
+{
+  "name": "ocwpwd-dec",
+  "version": "0.0.0",
+  "homepage": "https://github.com/DArcMattr/ocwpwd-dec",
+  "authors": [
+    "David Arceneaux <david@davidthemachine.org>"
+  ],
+  "description": "pull in impress.js",
+  "main": "impress.js",
+  "keywords": [
+    "impress.js"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "impress.js": "~0.5.3"
+  }
+}
