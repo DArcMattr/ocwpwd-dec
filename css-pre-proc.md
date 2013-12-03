@@ -1,10 +1,14 @@
 # Intro to CSS Preprocessors
 
-XXX Public URL goes here XXX
+## Orange County WordPress Web Designers Meetup, December 2013
+
+<http://davidthemachine.org/ocwpwd_201312/css-pre-proc.html>
 
 * * *
 
 ## Who I am
+
+David Arceneaux
 
 More developer than designer; artisan, not artist;
 
@@ -12,7 +16,7 @@ I carry this perspective into my web work
 
 * * *
 
-## What's a preprocessor?
+## What's a CSS preprocessor?
 
 A program that takes a more compact CSS-like file, and turns it into
 full-fledged CSS.
@@ -55,32 +59,28 @@ smaller pieces
 
 Examples are in SASS, because that's what I know best
 
+* * *
+
 ### More compact expression through nesting
 
 ```CSS
 a {
   ...
 }
-
 a:link {
   ...
 }
-
 a:visited {
   ...
 }
-
 a:hover {
   ...
 }
-
 a:focus {
 }
-
 a:active {
   ...
 }
-
 a img {
   ...
 }
@@ -88,7 +88,7 @@ a img {
 
 * * *
 
-Equivalent to:
+Can be expressed in SCSS as:
 
 ```SCSS
 a {
@@ -120,11 +120,11 @@ a {
 
 These give you DRY-ness
 
+* * *
+
 ```SCSS
 $tardis-blue: #003b6f;
-
 $base-font-size: 15px;
-
 $line-height: 1.2 * $base-font-size;
 
 html {
@@ -177,6 +177,8 @@ Reuse of code is a key benefit of going with a preprocessor.
 
 In this example, I'm loading Compass, a popular SASS library of mixins, along
 with some of my own pieces:
+
+* * *
 
 ```SCSS
 @import 'normalize';
@@ -254,6 +256,8 @@ Interactive on-line SASS color playground
 
 * Using Bootstrap's LESS mixins to keep the benefits, but none of the clutter
 from using the classes
+
+* * *
 
 ### Example CodePen, thebabydino: <http://codepen.io/thebabydino>
 

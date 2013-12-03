@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang=en-us>
+<head>
+<meta charset=utf-8>
+<title>Intro to CSS Preprocessors</title>
+<link href="http://fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic" rel="stylesheet" />
+<link rel=stylesheet href=bower_components/impress.js/css/impress-demo.css>
+<link rel=stylesheet href=http://cultureofreason.org/lib_style/contrib/_normalize.scss/normalize.css>
+<style>
+h1, h2, h3 { font-weight: 700; }
+h1 { line-height: 3.6rem; }
+h2, h3 { line-height: 2.4rem; font-weight: 700; }
+h1 { font-size: 3.6rem; }
+h2 { font-size: 2.4rem; }
+h3 { font-size: 2rem; }
+pre { font-size: 1.2rem; line-height: 1.8rem; }
+</style>
+</head>
+<body class=impress-not-supported>
+<div class="fallback-message">
+  <p>Your browser <b>doesn&rsquo;t support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
+  <p>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.</p>
+</div>
+<div id=impress>
+<div id=intro_1 class="step slide" data-x=0 data-y=0>
+<h1 id="intro-to-css-preprocessors">Intro to CSS Preprocessors</h1>
+<h2>Orange County WordPress Web Designers Meetup, December 2013</h2>
+<p>This presentation is at:</p>
+<p><small><a href=http://davidthemachine.org/ocwpwd_201312/css-pre-proc.html>http://davidthemachine.org/ocwpwd_201312/css-pre-proc.html</a></small></p>
+</div><div id=intro_2 class="step slide" data-x=1000 data-y=0>
+<h2 id="who-i-am">Who I am</h2>
+<p>David Arceneaux</p>
+<p>More developer than designer; artisan, not artist;</p>
+<p>I carry this perspective into my web work</p>
+</div><div id=intro_3 class="step slide" data-x=2000 data-y=0>
+<h2 id="whats-a-preprocessor">What&rsquo;s a CSS preprocessor?</h2>
+<p>A program that takes a more compact CSS-like file, and turns it into full-fledged CSS.</p>
+<ul>
+<li><p>If you already know and work with CSS, you&rsquo;ll be in familiar territory</p></li>
+<li><p>Can copy/paste valid CSS into a preprocessor</p></li>
+</ul>
+</div><div id=intro_4 class="step slide" data-x=3000 data-y=0>
+<h2 id="why-use-a-preprocessor">Why use a preprocessor?</h2>
+<p>DRY - Don&rsquo;t Repeat Yourself</p>
+<p>Reusability - all preprocessors have ways to tie up common CSS operations into smaller pieces</p>
+</div><div id=intro_5 class="step slide" data-x=4000 data-y=0>
+<h2 id="what-preprocessors-are-out-there">What preprocessors are out there?</h2>
+<h3 id="less-httplesscss.org">LESS <a href="http://lesscss.org">http://lesscss.org</a></h3>
+<ul>
+<li>Famous for being the engine behind Bootstrap <a href="http://getbootstrap.com/">http://getbootstrap.com/</a></li>
+</ul>
+<h3 id="sass-httpsass-lang.com">SASS <a href="http://sass-lang.com">http://sass-lang.com</a></h3>
+<ul>
+<li><p>Engine behind Zurb Foundation <a href="http://foundation.zurb.com/">http://foundation.zurb.com/</a></p></li>
+<li><p>2 variants, counting SCSS, which is more CSS-like; will use SASS/SCSS interchangeably, but SASS is easier to pronounce</p></li>
+</ul>
+<h3 id="stylus-httplearnboost.github.iostylus">Stylus <a href="http://learnboost.github.io/stylus/">http://learnboost.github.io/stylus/</a></h3>
+<ul>
+<li>Engine behind Roots <a href="http://roots.cx/">http://roots.cx/</a></li>
+</ul>
+</div>
+<div id=intro_6 class="step slide" data-x=5000 data-y=0>
+<h2 id="what-a-preprocessor-gives-you">What a preprocessor gives you</h2>
+<p>Examples are in SASS, because that&rsquo;s what I know best</p>
+</div>
+<div id=intro_6a class="step slide" data-x=5500 data-y=-750>
+<h3 id="more-compact-expression-through-nesting">More compact expression through nesting</h3>
+<pre class="sourceCode CSS"><code class="sourceCode css">a <span class="kw">{</span>
+  <span class="er">...</span>
+<span class="kw">}</span>
+a<span class="dv">:link</span> <span class="kw">{</span>
+  <span class="er">...</span>
+<span class="kw">}</span>
+a<span class="dv">:visited</span> <span class="kw">{</span>
+  <span class="er">...</span>
+<span class="kw">}</span>
+a<span class="dv">:hover</span> <span class="kw">{</span>
+  <span class="er">...</span>
+<span class="kw">}</span>
+a<span class="dv">:focus</span> <span class="kw">{</span>
+<span class="kw">}</span>
+a<span class="dv">:active</span> <span class="kw">{</span>
+  <span class="er">...</span>
+<span class="kw">}</span>
+a img <span class="kw">{</span>
+  <span class="er">...</span>
+<span class="kw">}</span></code></pre>
+</div><div id=intro_7 class="step slide" data-x=6000 data-y=0>
+<p>Can be expressed in SCSS as:</p>
+<pre class="SCSS"><code>a {
+  ...
+  &amp;:link {
+    ...
+  }
+  &amp;:visited {
+    ...
+  }
+  &amp;:hover {
+    ...
+  }
+  &amp;:focus {
+    ...
+  }
+  &amp;:active {
+    ...
+  }
+  img {
+    ...
+  }
+}</code></pre>
+</div>
+<div id=intro_8 class="step slide" data-x=7000 data-y=0>
+<h3 id="variables">Variables</h3>
+<p>These give you DRY-ness</p>
+</div>
+<div id=intro_8a class="step slide" data-x=7500 data-y=750>
+<pre class="SCSS"><code>$tardis-blue: #003b6f;
+$base-font-size: 15px;
+$line-height: 1.2 * $base-font-size;
+html {
+  font-size: $base-font-size;
+  line-height: $line-height;
+  background-color: complement( $tardis-blue );
+}
+
+a {
+  &amp;:link {
+    color: $tardis-blue;
+  }
+  &amp;:visited {
+    color: desaturate( $tardis-blue, 20% );
+  }
+  &amp;:hover, &amp;:focus {
+    color: lighten( $tardis-blue, 20% );
+  }
+  &amp;:active {
+    color: invert( $tardis-blue );
+  }
+}</code></pre>
+</div><div id=intro_9 class="step slide" data-x=8000 data-y=0>
+<p>This becomes the following CSS...</p>
+<pre class="sourceCode CSS"><code class="sourceCode css">html <span class="kw">{</span>
+  <span class="kw">font-size:</span> <span class="dt">15px</span><span class="kw">;</span>
+  <span class="kw">line-height:</span> <span class="dt">18px</span><span class="kw">;</span>
+  <span class="kw">background-color:</span> <span class="dt">#6f3400</span><span class="kw">;</span> <span class="kw">}</span>
+
+a<span class="dv">:link</span> <span class="kw">{</span>
+  <span class="kw">color:</span> <span class="dt">#003b6f</span><span class="kw">;</span> <span class="kw">}</span>
+a<span class="dv">:visited</span> <span class="kw">{</span>
+  <span class="kw">color:</span> <span class="dt">#0b3a64</span><span class="kw">;</span> <span class="kw">}</span>
+a<span class="dv">:hover</span>, a<span class="dv">:focus</span> <span class="kw">{</span>
+  <span class="kw">color:</span> <span class="dt">#0071d5</span><span class="kw">;</span> <span class="kw">}</span>
+a<span class="dv">:active</span> <span class="kw">{</span>
+  <span class="kw">color:</span> <span class="dt">#ffc490</span><span class="kw">;</span> <span class="kw">}</span></code></pre>
+</div>
+<div id=intro_10 class="step slide" data-x=9000 data-y=0>
+<h3 id="mixing-extending-including">Mixing, Extending, Including</h3>
+<p>Reuse of code is a key benefit of going with a preprocessor.</p>
+<p>In this example, I&rsquo;m loading Compass, a popular SASS library of mixins, along with some of my own pieces:</p>
+</div>
+<div id=intro_10a class="step slide" data-x=9500 data-y=-750>
+<pre class="SCSS"><code>@import &#39;normalize&#39;;
+@import &#39;sizing&#39;;
+@import &#39;compass&#39;;
+
+$base-font-size = 1rem;
+$lh = 1.2 * $base-font-size;
+
+%clearfix { ... } /* placeholder class */
+.branding { ... }
+
+body {
+  @include rem( padding, $lh );
+  ...
+  &gt; header {
+    ...
+    @extend .branding;
+    @include rem( margin, 0 $lh );
+  }
+  &gt; footer {
+    ...
+    @extend %clearfix;
+  }
+}</code></pre>
+</div><div id=intro_11 class="step slide" data-x=10000 data-y=0>
+<h2 id="thats-fine-i-guess-but-can-i-use-it-without-using-the-command-line">&ldquo;That&rsquo;s fine, I guess, but can I use it without using the command line?&ldquo;</h2>
+<p>These utilities were born in the command-line, coder-driven world, but there are ways to use these without having to venture to the command line.</p>
+<ul>
+<li><p>CodeKit, for Mac <a href="http://incident57.com/codekit/">http://incident57.com/codekit/</a></p></li>
+<li><p>Prepros, for Mac &amp; Windows <a href="http://alphapixels.com/prepros/">http://alphapixels.com/prepros/</a></p></li>
+</ul>
+</div><div id=intro_12 class="step slide" data-x=11000 data-y=0>
+<p>These packages streamline front-end development work, however I do not use them. I can only pass on what their selling points are:</p>
+<ul>
+<li><p>Automagic processing &amp; browser refreshing For javascript &amp; CSS work</p></li>
+<li><p>Also uglifies stylesheets &amp; javascripts for you</p></li>
+</ul>
+</div><div id=intro_13 class="step slide" data-x=12000 data-y=0>
+<h2 id="try-before-you-install">Try before you install</h2>
+<p>Various online sandbox sites out there, like</p>
+<ul>
+<li><p><a href="http://procssor.com/">http://procssor.com/</a> ProCSSor</p></li>
+<li><p><a href="http://codepen.io">http://codepen.io</a> CodePen</p></li>
+</ul>
+</div>
+<div id=intro_14 class="step slide" data-x=13000 data-y=0>
+<h2 id="more-reading-eye-candy">More reading &amp; eye candy</h2>
+<h3 id="httpcss-tricks.com-css-tricks"><a href="http://css-tricks.com">http://css-tricks.com</a> CSS-Tricks</h3>
+<p>Chris Coyier has plenty of articles about preprocessor uses</p>
+<h3 id="httpsassme.arc90.com-sassme"><a href="http://sassme.arc90.com/">http://sassme.arc90.com/</a> SassMe</h3>
+<p>Interactive on-line SASS color playground</p>
+<h3 id="httpcolorschemedesigner.com-done-in-sass"><a href="http://colorschemedesigner.com/">http://colorschemedesigner.com/</a> done in SASS</h3>
+<ul>
+<li>Color Schemer library for SASS: <a href="https://github.com/Team-Sass/color-schemer">https://github.com/Team-Sass/color-schemer</a></li>
+</ul>
+<h3 id="bootstrap-without-all-the-debt-httpscoderwall.compwixovg">Bootstrap Without all the Debt <a href="https://coderwall.com/p/wixovg">https://coderwall.com/p/wixovg</a></h3>
+<ul>
+<li>Using Bootstrap&rsquo;s LESS mixins to keep the benefits, but none of the clutter from using the classes</li>
+</ul>
+</div>
+<div id=intro_14a class="step slide" data-x=13500 data-y=750>
+<h3 id="example-codepen-thebabydino-httpcodepen.iothebabydino">Example CodePen, thebabydino: <a href="http://codepen.io/thebabydino">http://codepen.io/thebabydino</a></h3>
+<h2 id="more-front-end-frameworks-and-the-preprocessors-they-use">More front-end frameworks, and the preprocessors they use</h2>
+<p><a href="http://usablica.github.io/front-end-frameworks/compare.html">http://usablica.github.io/front-end-frameworks/compare.html</a></p>
+</div>
+<div id=intro_15 class="step slide" data-x=14000 data-y=0>
+<p>THEND</p>
+</div>
+<div class="hint">
+    <p>Use a spacebar or arrow keys to navigate</p>
+</div>
+</div>
+<script>
+if ("ontouchstart" in document.documentElement) {
+    document.querySelector(".hint").innerHTML = "<p>Tap on the left or right to navigate</p>";
+}
+</script>
+<script src="bower_components/impress.js/js/impress.js"></script>
+<script>impress().init();</script>
+</body>
+</html>
